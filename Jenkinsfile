@@ -13,10 +13,10 @@ pipeline {
             //checkout the repository
             steps {
                bat '''
-               echo Downloading .Net 6 Sdk
-               curl -l -o https://builds.dotnet.microsoft.com/dotnet/Sdk/6.0.136/dotnet-sdk-6.0.136-win-x64.exe
-               echo installing dotnet-sdk-6.0.132-win-x86.exe
-               dotnet-sdk-6.0.132-win-x86.exe /quiet /norestart
+               echo Downloading .Net 8 Sdk
+               curl -L -o dotnet-sdk-8.0.310-win-x64.exe https://download.visualstudio.microsoft.com/download/pr/4fbba4d2-246b-4f69-bc1d-9003ca0c5a43/c05954d6dd791067764a9599d5fabe30/dotnet-sdk-8.0.310-win-x64.exe
+               echo installing dotnet-sdk-8.0.310-win-x64.exe
+               dotnet-sdk-8.0.310-win-x64.exe /quiet /norestart
                '''
             }
         }
