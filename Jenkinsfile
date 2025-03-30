@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage("Set up .Net core") {
+        stage("Download .Net SDK") {
             //checkout the repository
             steps {
                bat '''
@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage("Set up .Net core") {
+        stage("Restore Dependencies") {
             //checkout the repository
             steps {
                bat 'dotnet restore SeleniumIde.sln'
